@@ -20,6 +20,15 @@ const areaTriangulo = (base, altura) => (base * altura) / 2;
 //     return((base * altura) / 2);
 // }
 
+function alturaTriangulo(lado1, lado2, base) {
+    if(lado1 === lado2 && lado1 != base && lado2 != base) {
+        const altura = Math.sqrt((lado1 **2) - (base/4));
+        return(altura);
+    } else {
+        alert("No es un triangulo Isóceles")
+    }
+}
+
 //Variables y cálculo de un círculo
 const diametroCirculo = radio => radio * 2;
 // function diametroCirculo(radio) {
@@ -36,6 +45,8 @@ const areaCirculo = radio => Math.PI * Math.pow(radio, 2);
 // function areaCirculo(radio) {
 //     return(Math.PI * (radio ** 2));
 // }
+
+
 
 //Interactuando con el HTMMl
 
@@ -103,4 +114,16 @@ function calcPerimetroTriangulo() {
 
     const perimetro = perimetroTriangulo(valueLado1, valueLado2, valueBase);
     alert(perimetro);
+}
+
+function calcAlturaIsoceles() {
+    const inputlado1 = document.getElementById("ladoT1");
+    const inputlado2 = document.getElementById("ladoT2");
+    const inputBase = document.getElementById("base");
+    const valueLado1 = inputlado1.value;
+    const valueLado2 = inputlado2.value;
+    const valueBase = inputBase.value;
+
+    const altura = alturaTriangulo(valueLado1, valueLado2, valueBase);
+    alert(altura);
 }

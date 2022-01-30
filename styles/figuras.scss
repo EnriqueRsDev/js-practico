@@ -9,6 +9,12 @@ $fuente: 'Roboto', sans-serif;
 $titleSize: 22px;
 $weigthTitle: 500;
 
+@mixin tercerBoton {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -82,7 +88,7 @@ $weigthTitle: 500;
                 gap: 15px;
                 
 
-                .btn--area, .btn--perimetro, .btn--cirfunferencia {
+                .btn--area, .btn--perimetro, .btn--cirfunferencia, .btn--altura {
                     width: 80px;
                     height: 25px;
                     border-radius: 5px;
@@ -91,7 +97,7 @@ $weigthTitle: 500;
                     color: $primaryTextColor;
                 }
 
-                .btn--area:active, .btn--perimetro:active, .btn--cirfunferencia:active {
+                .btn--area:active, .btn--perimetro:active, .btn--cirfunferencia:active, .btn--altura:active {
                     background-color: $secondaryTextColor;
                 }
             }
@@ -99,9 +105,7 @@ $weigthTitle: 500;
 
         .calc--circle {
             .btn {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: auto;
+                @include tercerBoton;
                 
                 .btn--cirfunferencia {
                     width: 100%;
@@ -111,7 +115,16 @@ $weigthTitle: 500;
         }
 
         .calc--triangle {
-            height: 475px;
+            height: 525px;
+
+            .btn {
+                @include tercerBoton;
+
+                .btn--altura {
+                    width: 100%;
+                    grid-column: 1/3;
+                }
+            }
         }
     }
 }

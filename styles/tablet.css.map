@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["tablet.scss"],"names":[],"mappings":"AAEI;EACA;EACA;EACA;EACA;EACA;EACA","file":"tablet.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAEI,cAFU,CAEV,UAAU,CAAC;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,IAAI;EACT,SAAS,EAAE,KAAK;CACf",
+    "sources": [
+        "tablet.scss"
+    ],
+    "names": [],
+    "file": "tablet.css"
+}
