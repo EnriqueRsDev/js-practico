@@ -1,0 +1,10 @@
+.mainContainer .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  min-width: 768px;
+}
+
+/*# sourceMappingURL=tablet.css.map */

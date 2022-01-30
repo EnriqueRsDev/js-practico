@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/figuras.css">
+    <link rel="stylesheet" href="./styles/tablet.css" media="(min-width: 768px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -33,52 +34,55 @@
 
             <form action="" class="container__calc calc--square">
                 <h2>Cuadrado</h2>
-                <label for="">¿Cuánto mide un lado?</label>
-                <input type="text" name="lado" id="lado">
+                <label for="lado">¿Cuánto mide un lado?</label>
+                <input type="number" name="lado" id="lado">
 
                 <section class="btn">
-                    <input class="btn--area" type="button" value="Área">
-                    <input class="btn--perimetro" type="button" value="Perímetro">
+                    <input class="btn--area" type="button" value="Área" onclick="calcAreaCuadrado()">
+                    <input class="btn--perimetro" type="button" value="Perímetro" onclick="calcPerimetroCuadrado()">
                 </section>
 
                 <label for="">El resultado es:</label>
-                <input type="text" value="" id="resultado">
+                <input type="text" value="" id="resultado" disabled>
                 
-            </form>
-
-            <form action="" class="container__calc calc--triangle">
-                <h2>Triángulo</h2>
-                <label for="">¿Cuánto mide el lado 1?</label>
-                <input type="text" name="lado" id="lado" class="lado1">
-
-                <label for="">¿Cuánto mide el lado 2?</label>
-                <input type="text" name="lado" id="lado" class="lado2">
-
-                <label for="">¿Cuánto mide la base?</label>
-                <input type="text" name="lado" id="lado" class="base">
-
-                <section class="btn">
-                    <input class="btn--area" type="button" value="Área">
-                    <input class="btn--perimetro" type="button" value="Perímetro">
-                </section>
-
-                <label for="">El resultado es:</label>
-                <input type="text" value="" id="resultado">
             </form>
 
             <form action="" class="container__calc calc--circle">
                 <h2>Circulo</h2>
                 <label for="">¿Cuánto mide el radio?</label>
-                <input type="text" name="lado" id="lado">
+                <input type="number" name="radio" id="radio">
 
                 <section class="btn">
-                    <input class="btn--area" type="button" value="Área">
-                    <input class="btn--perimetro" type="button" value="Perímetro">
-                    <input class="btn--cirfunferencia" type="button" value="Cirfunferencia">
+                    <input class="btn--area" type="button" value="Área" onclick="calcAreaCirculo()">
+                    <input class="btn--perimetro" type="button" value="Perímetro" onclick="calcPerimetroCirculo()">
+                    <input class="btn--cirfunferencia" type="button" value="Cirfunferencia" onclick="calcCircunferenciaCirculo()">
                 </section>
 
                 <label for="">El resultado es:</label>
-                <input type="text" value="" id="resultado">
+                <input type="text" value="" id="resultado" disabled>
+            </form>
+
+            <form action="" class="container__calc calc--triangle">
+                <h2>Triángulo</h2>
+                <label for="">¿Cuánto mide el lado 1?</label>
+                <input type="number" name="lado" id="ladoT1" class="lado1">
+
+                <label for="">¿Cuánto mide el lado 2?</label>
+                <input type="number" name="lado" id="ladoT2" class="lado2">
+
+                <label for="">¿Cuánto mide la base?</label>
+                <input type="number" name="lado" id="base" class="base">
+                
+                <label for="">¿Cuánto mide la altura?</label>
+                <input type="number" name="lado" id="altura" class="altura">
+
+                <section class="btn">
+                    <input class="btn--area" type="button" value="Área" onclick="calcAreaTriangulo()">
+                    <input class="btn--perimetro" type="button" value="Perímetro" onclick="calcPerimetroTriangulo()">
+                </section>
+
+                <label for="">El resultado es:</label>
+                <input type="text" value="" id="resultado" disabled>
             </form>
 
         </section>

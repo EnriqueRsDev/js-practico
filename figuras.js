@@ -10,7 +10,7 @@ const areaCuadrado = lado => (lado ** 2);
 // }
 
 //Variables y cálculo de un triangulo
-const perimetroTriangulo = (lado1, lado2, base) => lado1 + lado2 + base;
+const perimetroTriangulo = (lado1, lado2, base) => (parseInt(lado1) + parseInt(lado2) + parseInt(base));
 // function perimetroTriangulo(lado1, lado2, base) {
 //     return(lado1 + lado2 + base);
 // }
@@ -36,3 +36,71 @@ const areaCirculo = radio => Math.PI * Math.pow(radio, 2);
 // function areaCirculo(radio) {
 //     return(Math.PI * (radio ** 2));
 // }
+
+//Interactuando con el HTMMl
+
+//cuadrado
+function calcPerimetroCuadrado() {
+    const input = document.getElementById("lado");
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro)
+}
+
+function calcAreaCuadrado() {
+    const input = document.getElementById("lado");
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+    alert(area)
+}
+
+//circulo
+function calcAreaCirculo() {
+    const input = document.getElementById("radio");
+    const value = input.value;
+
+    const area = areaCirculo(value);
+    alert(area)
+}
+
+function calcPerimetroCirculo() {
+    const input = document.getElementById("radio");
+    const value = input.value;
+
+    const perimetro = perimetroCirculo(value);
+    alert(perimetro)
+}
+
+function calcCircunferenciaCirculo() {
+    const input = document.getElementById("radio");
+    const value = input.value;
+
+    const circunferencia = diametroCirculo(value);
+    alert(circunferencia);
+}
+
+//triangulo
+
+function calcAreaTriangulo() {
+    const inputBase = document.getElementById("base");
+    const inputAltura = document.getElementById("altura");
+    const valueBase = inputBase.value;
+    const valueAltura = inputAltura.value;
+
+    const area = areaTriangulo(valueBase, valueAltura);
+    alert(area);
+}
+
+function calcPerimetroTriangulo() {
+    const inputlado1 = document.getElementById("ladoT1");
+    const inputlado2 = document.getElementById("ladoT2");
+    const inputBase = document.getElementById("base");
+    const valueLado1 = inputlado1.value;
+    const valueLado2 = inputlado2.value;
+    const valueBase = inputBase.value;
+
+    const perimetro = perimetroTriangulo(valueLado1, valueLado2, valueBase);
+    alert(perimetro);
+}
