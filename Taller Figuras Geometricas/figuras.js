@@ -53,10 +53,12 @@ const areaCirculo = radio => Math.PI * Math.pow(radio, 2);
 //cuadrado
 function calcPerimetroCuadrado() {
     const input = document.getElementById("lado");
+    const resultado = document.getElementById("resultadoCuadrado");
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value);
     alert(perimetro)
+    resultado.innerHTML(perimetro);
 }
 
 function calcAreaCuadrado() {
