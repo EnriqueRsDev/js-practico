@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/styles.css">
+    <script src="./promedio.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Promedio</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Calculadora de Promedio, Mediana y Moda</h1>
+    </header>
+
+    <main class="main">
+        <section class="calcs-container">
+            <form action="" class="prom-container">
+                <label for="prom-input">Ingresa los valores a calcular:</label>
+                <input type="number" id="prom-input" class="prom-input">
+
+                <input type="button" class="prom-add" id="prom-add" value="Añadir" onclick="addArrayElement()">
+                <input type="button" class="prom-btn" value="Promedio" onclick="promedio(array)">
+
+                <p class="prom-resultado" id="prom-resultado"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

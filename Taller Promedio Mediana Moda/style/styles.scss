@@ -1,0 +1,55 @@
+//variables
+$primaryColor: #284B63;
+$secondaryColor: #3C6E71;
+$TirdColor: #353535;
+$prymaryText: #FFFFFF;
+$shadow: #D9D9D9;
+
+$fuente: 'Roboto', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente;
+}
+
+.header {
+    width: 100%;
+    min-width: 320px;
+    padding: 8px;
+    background-color: $primaryColor;
+    color: $prymaryText;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.main {
+    width: 100%;
+    min-width: 320px;
+    padding: 8px;
+
+    .calcs-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+        .prom-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            padding: 8px;
+            gap: 12px;
+            border: 1px solid $TirdColor;
+            border-radius: 8px;
+
+            input {
+                padding: 3px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
