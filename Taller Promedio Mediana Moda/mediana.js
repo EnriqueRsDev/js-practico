@@ -1,30 +1,65 @@
-const sumaLista = lista.reduce(
-    function(valorAcumulado = 0, nuevoElemento) {
-        return valorAcumulado + nuevoElemento;
+function promedio(lista) {
+    const sumaLista = lista.reduce( //Reduciendo el array a un solo número
+        function(valorAcumulado = 0, nuevoElemento) {
+            return valorAcumulado + nuevoElemento;
+        }
+    );
+    const promLista = sumaLista / lista.length
+    return promLista;
+}
+
+//Interactuando con el html
+
+const lista = [];
+
+function addListElement() {
+    const medInput = document.getElementById("med-input").value;
+
+    if(medInput > 0) {
+        let newArray = lista.push(parseInt(medInput)); //Insertando los valores en el array
+        lista.sort(function(a, b) {
+            return a - b;
+        })
+    } else {
+        alert("Ingresa un valor");
     }
-)
+    console.log(lista);
+}
 
-const lista = [100, 200, 500, 900000000];
-
-const mitadLista = parseInt(lista.length / 2);
-
+//Verificando si es par o impar
 function par(num) {
-    if(num % 2 == 0) {
+    if(num % 2 === 0) {
         return true;
     } else {
         return false;
     }
 }
 
-let mediana;
+function calcMediana() {
+    let mediana;
+    const resultado = document.getElementById("med-resultado");
 
-if(par(lista.length)) {
-    const elemento1 = lista[mitadLista];
-    const elemento2 = lista[mitadLista + 1];
+    const mitadLista = parseInt(lista.length / 2); 
 
-    const prom = sumaLista([elemento1, elemento2])
-    mediana = prom;
+    /**
+     * Si lista es par toma los dos elementos de en medio
+     * y saca el promedio de ellos para obtener la mediana 
+     * */ 
+    if(par(lista.length)) {
+        const elemento1 = lista[mitadLista - 1]; 
+        const elemento2 = lista[mitadLista]; 
 
-} else {
-    mediana = lista[mitadLista];
+        const prom = promedio([elemento1, elemento2])
+        mediana = prom;
+        resultado.innerText = `La mediana es ${mediana}`
+
+    /**
+     * Si la lista es impar, toma el número de en medio 
+     * y ese sería la mediana
+     */
+    } else {
+        mediana = lista[mitadLista];
+        resultado.innerText = `La mediana es ${mediana}`
+    }
 }
+

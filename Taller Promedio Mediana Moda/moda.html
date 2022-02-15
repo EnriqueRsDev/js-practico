@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/styles.css">
-    <script src="./mediana.js"></script>
+    <script src="./moda.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -18,14 +18,14 @@
 
     <main class="main">
         <section class="calcs-container">
-            <form action="" class="med-container">
-                <label for="med-input">Ingresa los valores a calcular:</label>
-                <input type="number" id="med-input" class="med-input">
+            <form action="" class="mod-container">
+                <label for="mod-input">Ingresa los valores a calcular:</label>
+                <input type="number" id="mod-input" class="mod-input">
 
-                <input type="button" class="med-add" id="med-add" value="Añadir" onclick="addListElement()">
-                <input type="button" class="med-btn" value="Mediana" onclick="calcMediana()">
+                <input type="button" class="mod-add" id="mod-add" value="Añadir" onclick="addElement()">
+                <input type="button" class="mod-btn" value="Mediana" onclick="objectList(list1)">
 
-                <p class="med-resultado" id="med-resultado"></p>
+                <p class="mod-resultado" id="mod-resultado"></p>
             </form>
         </section>
     </main>
